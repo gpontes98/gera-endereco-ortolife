@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/style.css">
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery.maskedinput-1.1.4.pack.js"></script>
+
+        <script src="scripts/searchCep.js" defer></script>
+        <script src="scripts/print.js" defer></script>
+        <script src="scripts/releaseSender.js" defer></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h3>Sistema para Impressão de Endereços</h3>
+                </div>
+            </div>
+            
+        
+            <form class="row">
+                <div class="col-inputs col-sm-12 col-md-6">
+                    <legend>Remetente</legend>
+        
+                    <label for="nameSender">Nome</label>
+                    <input class="form-control dataSender" name="nameSender" id="" value="OrtoLife" readonly>
+
+                    <label for="zipCodeSender">CEP:</label>
+                    <input class="form-control dataSender" name="zipCodeSender" id="" value="03938-090" readonly>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <label for="streetSender">Rua</small></label>
+                            <input class="form-control dataSender" name="streetSender" id="" value="Travessa Xavier Sampaio" readonly>
+                        </div>
+                        <div class="col">
+                            <label for="numberSender">Número</label>
+                            <input class="form-control dataSender" name="numberSender" id="" value="132" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <label for="citySender">Cidade</label>
+                            <input class="form-control dataSender" name="citySender" id="" value="São Paulo" readonly>
+                        </div>
+                        <div class="col">
+                            <label for="stateSender">UF</label>
+                            <input class="form-control dataSender" name="stateSender" id="" value="SP" readonly>
+                        </div>
+                    </div>
+                
+                    <label for="districtSender">Bairro</label>
+                    <input class="form-control dataSender" name="districtSender" id="" value="Jardim Paraguaçu" readonly>               
+                </div>
+        
+                <div class="col-inputs col-sm-12 col-md-6">
+                    <legend>Destinatário</legend>
+                    
+                    <label for="nameRecipient">Nome</label>
+                    <input class="form-control dataRecipient" name="nameRecipient" id="nameRecipient">                   
+
+                    <label for="zipCodeRecipient">CEP:</label>
+                    <input class="form-control dataRecipient" name="zipCodeRecipient" id="zipCodeRecipient">                           
+                    
+                    <div class="row">
+                        <div class="col">
+                            <label for="streetRecipient">Rua</small></label>
+                            <input class="form-control dataRecipient zipCodeRecipientResult" name="streetRecipient" id="streetRecipient">           
+                        </div>
+
+                        <div class="col">
+                            <label for="numberRecipient">Número</label>
+                            <input class="form-control dataRecipient" name="numberRecipient" id="numberRecipient">
+                        </div>
+                    </div>
+                            
+                    <div class="row">
+                        <div class="col">
+                            <label for="cityRecipient">Cidade</label>
+                            <input class="form-control dataRecipient zipCodeRecipientResult" name="cityRecipient" id="cityRecipient">
+                        </div>
+                        <div class="col">
+                            <label for="stateRecipient">UF</label>
+                            <input class="form-control dataRecipient zipCodeRecipientResult" name="stateRecipient" id="stateRecipient">
+                        </div>
+                    </div>                                                   
+                
+                    <label for="districtRecipient">Bairro</label>
+                    <input class="form-control dataRecipient zipCodeRecipientResult" name="districtRecipient" id="districtRecipient">
+                
+                    
+                    <div id="spanRecipientResult"></div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <button class="btn btn-sm btn-danger btn-block" type="reset">Limpar Campos</button>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <button class="btn btn-sm btn-secondary btn-block" type="button" id="btnReleaseSender">Liberar Remetente</button>
+                        </div>
+
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <button class="btn btn-lg btn-primary btn-block" type="button" id="printIt">Imprimir</button>
+                        </div>
+                    </div>                
+                </div>
+            </form>
+
+            <div id="inputsPrint" style="display: none;">
+                <div class="printFields" id="senderPrintFields">
+                    Remetente <br>
+                </div>
+                
+                <div class="printFields" id="recipientPrintFields">
+                    Destinatário <br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

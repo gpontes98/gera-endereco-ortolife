@@ -6,7 +6,7 @@ label {
 
 /*Colocando margin-top nos botões do bootstrap */
 .btn-block{
-    margin-top: .5rem;
+    margin-top: 1rem;
 }
 
 body .printFields{
@@ -30,9 +30,30 @@ body .container{
     }
 }
 
+@media screen and (max-width:600px){
+    body .container .row .col-center h3{
+        font-size: 1.2rem;
+    }
+
+    body .container .row .col-inputs legend{
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+
+    .btn-block{
+        margin-top: .3rem;
+    }
+}
+
 /* Espaçamento das duas colunas principais, onde os inputs estão */
 .col-inputs{
     margin-top: 2rem;
+}
+
+/* Centralizando conteúdo dentro da div com logo e titulo */
+.col-center{
+    text-align: center;
+    margin-top: 1rem;
 }
 
 

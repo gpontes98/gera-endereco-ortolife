@@ -40,7 +40,7 @@
                     <label for="nameSender">Nome</label>
                     <input class="form-control dataSender" name="nameSender" id="" value="Orto Life" readonly>
 
-                    <label for="zipCodeSender">CEP:</label>
+                    <label for="zipCodeSender">CEP</label>
                     <input class="form-control dataSender" name="zipCodeSender" id="" value="03938-090" readonly>
                     
                     <div class="row">
@@ -72,37 +72,45 @@
                 <div class="col-inputs col-sm-12 col-md-6">
                     <legend>Destinatário</legend>
                     
-                    <label for="nameRecipient">Nome</label>
+                    <label for="nameRecipient">Nome *</label>
                     <input class="form-control dataRecipient" name="nameRecipient" id="nameRecipient">                   
 
-                    <label for="zipCodeRecipient">CEP:</label>
+                    <label for="zipCodeRecipient">CEP *</label>
                     <input class="form-control dataRecipient" name="zipCodeRecipient" id="zipCodeRecipient">                           
                     
                     <div class="row">
                         <div class="col-8">
-                            <label for="streetRecipient">Rua</small></label>
+                            <label for="streetRecipient">Rua *</small></label>
                             <input class="form-control dataRecipient zipCodeRecipientResult" name="streetRecipient" id="streetRecipient">           
                         </div>
 
                         <div class="col-4">
-                            <label for="numberRecipient">Número</label>
+                            <label for="numberRecipient">Número *</label>
                             <input class="form-control dataRecipient" name="numberRecipient" id="numberRecipient">
                         </div>
                     </div>
                             
                     <div class="row">
                         <div class="col-8">
-                            <label for="cityRecipient">Cidade</label>
+                            <label for="cityRecipient">Cidade *</label>
                             <input class="form-control dataRecipient zipCodeRecipientResult" name="cityRecipient" id="cityRecipient">
                         </div>
                         <div class="col-4">
-                            <label for="stateRecipient">UF</label>
+                            <label for="stateRecipient">UF *</label>
                             <input class="form-control dataRecipient zipCodeRecipientResult" name="stateRecipient" id="stateRecipient">
                         </div>
                     </div>                                                   
-                
-                    <label for="districtRecipient">Bairro</label>
-                    <input class="form-control dataRecipient zipCodeRecipientResult" name="districtRecipient" id="districtRecipient">
+                    
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <label for="districtRecipient">Bairro *</label>
+                            <input class="form-control dataRecipient zipCodeRecipientResult" name="districtRecipient" id="districtRecipient">
+                        </div>
+                        <div class="col-sm-12 col-md-6"> 
+                            <label for="complementRecipient">Complemento</label>
+                            <input class="form-control dataRecipient" name="complementRecipient" id="complementRecipient">
+                        </div>
+                    </div>                
                 
                     
                     <div id="spanRecipientResult"></div>

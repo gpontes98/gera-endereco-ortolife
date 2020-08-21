@@ -38,7 +38,7 @@ document.getElementById('printIt').onclick = function() {
 
     }else{
         resetDivPrintFields();// Limpando os campos da div para evitar redundância
-        alert("Por favor, preencha todos os campos para continuar!");
+        document.getElementById('spanRecipientResult').innerHTML = "Por favor, preencha todos os campos obrigatórios(*) para continuar!";
     }
 };
 
@@ -48,7 +48,7 @@ function fillFieldsPrint(classInputs, idFieldPrint){
     const inputs = document.querySelectorAll(classInputs); //Selecionando todos os inputs com a classe (recebida como primeiro parâmetro)
 
     inputs.forEach(element => {// Percorre o array na origem para verificar se algum campo está vázio
-        if (element.value == '') {flagReturn = false;}
+        if (element.value == '' && element.id != 'complementRecipient') {flagReturn = false;}
     });
 
     // mudar para a função parar com o return, não é possível parar um foreach
@@ -59,8 +59,12 @@ function fillFieldsPrint(classInputs, idFieldPrint){
     rowsFormated[0] = inputs[0].value;
     rowsFormated[1] = inputs[2].value + ", " + inputs[3].value;
     rowsFormated[2] = inputs[5].value + " - " + inputs[4].value;
-    rowsFormated[3] = inputs[6].value
+    rowsFormated[3] = inputs[6].value;
     rowsFormated[4] = inputs[1].value;
+    if(classInputs == ".dataRecipient"){
+        rowsFormated[5] = inputs[7].value;
+    }
+    
 
     rowsFormated.forEach(input => {  //Adiciona um novo parágrafo para cada linha no array
             var paragraph = document.createElement("p"); // cria o <p>

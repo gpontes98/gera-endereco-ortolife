@@ -21,7 +21,7 @@ body .container{
 @media print{
     body{
         font: normal 400 26px arial, sans-serif;
-        line-height: 15px;
+        line-height: 90%;
     }
 
     body .printFields{   
